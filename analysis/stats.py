@@ -76,4 +76,11 @@ def plot_cluster_distribution(df):
     plt.title("Distribution des prix par cluster")
     plt.savefig("data/cluster_boxplot.png")
 
-plot_cluster_distribution(load_books('data/books.csv'))
+def price_clustering(df):
+    X = df[['price']]
+    model = KMeans(n_clusters=3, random_state=42, n_init='auto')
+    df['price_cluster'] = model.fit_predict(X)
+    return df
+
+def summary_by_cluster(df):
+    return df.groupby('price_cluster')['price'].describe()
