@@ -1,7 +1,8 @@
 import csv
 from book import Book
+from typing import List
 
-def export_books_to_csv(books: Book, filepath):
+def export_books_to_csv(books: List[Book], filepath):
     with open(filepath, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
 
