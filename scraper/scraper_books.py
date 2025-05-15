@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from book import *
+from scraper.book import *
 
 class BookScraper:
     def __init__(self):

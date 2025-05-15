@@ -1,5 +1,5 @@
 import csv
-from book import Book
+from scraper.book import Book
 from typing import List
 
 def export_books_to_csv(books: List[Book], filepath):
