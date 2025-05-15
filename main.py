@@ -13,3 +13,6 @@ if __name__ == "__main__":
 
     # products = scrap_all_products()
     # export_products_to_csv(products, 'data/products.csv')
+    # print("{} produits récupérés.".format(len(products)))
+
+    
